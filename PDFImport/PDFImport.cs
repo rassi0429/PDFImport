@@ -19,34 +19,13 @@ namespace PDFImport
     public class PDFImport : NeosMod
     {
         public override string Name => "PDFImport";
-        public override string Author => "kokoa";
-        public override string Version => "1.0.0";
+        public override string Author => "kka429";
+        public override string Version => "0.0.1";
         public override string Link => "";
 
 
         public override void OnEngineInit()
         {
-            // Add all the pages of the pdf file to the collection
-            //var settings = new MagickReadSettings();
-            //settings.Density = new Density(300, 300);
-            //settings.BackgroundColor = new MagickColor(65535, 65535, 65535);
-
-            //using (var images = new MagickImageCollection())
-            //{
-            //    images.Read("./test.pdf", settings);
-
-            //    var page = 1;
-            //    foreach (var image in images)
-            //    {
-            //        // Write page to file that contains the page number
-            //        image.Alpha(AlphaOption.Remove);
-            //        image.Write("./Snakeware.Page" + page + ".png");
-            //        // Writing to a specific format works the same as for a single image
-            //        //image.Format = MagickFormat.Ptif;
-            //        //image.Write("./Snakeware.Page" + page + ".tif");
-            //        page++;
-            //    }
-            //}
             var harmony = new Harmony("com.kokoa.PDFImport");
             harmony.PatchAll();
         }
